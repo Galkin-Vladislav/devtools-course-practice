@@ -93,7 +93,7 @@
 | [Перевод чисел в их словесное написание на английском](http://codingdojo.org/kata/NumbersInWords/) | | |
 | [Работа с числовыми промежутками](http://codingdojo.org/kata/Range/) | | |
 | [Реализовать печать цифр в псевдографике](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#lcd-digits-) | | |
-| Поиск в тексте регулярных выражений (упрощенные) | | |
+| Поиск в тексте регулярных выражений (упрощенные) | Галкин В.А. 381806-2| |
 | [Ипотечный калькулятор](http://calculator-ipoteka.ru/calculator.php) | | |
 | [Калькулятор доходности вкладов](http://www.banki.ru/services/calculators/deposits/) |Лебедев А.В. 381803-2 | |
 | Игра "Быки и коровы" |Колесников Г.Р. 381803-2 | |
