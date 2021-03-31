@@ -14,6 +14,7 @@ ComplexNumber z3(Re3, Im3);
 
 ComplexNumber res(Re1 - Re2 - Re3, Im1 - Im2 - Im3);
 
+//Check operator-
 ASSERT_EQ(res, z1 - z2 - z3);
 }
 
@@ -22,9 +23,11 @@ double Re1 = 1.1, Im1 = 2.5;
 ComplexNumber z1(Re1, Im1);
 ComplexNumber z2(0.0, 0.0);
 
+//Check SetRe and SetIm
 z2.setRe(z1.getRe());
 z2.setIm(z1.getIm());
 
+//Check GetRe and GetIm
 ASSERT_EQ(z2.getRe(), Re1);
 ASSERT_EQ(z2.getIm(), Im1);
 }
@@ -48,7 +51,7 @@ if (z1.getRe() == z2.getRe() && z1.getIm() == z2.getIm()) res2 = true;
 bool res3, res4;
 
 if (z1 != z3) res3 = true;
-if (z1.getRe() != z3.getRe() || z1.getIm() == z3.getIm()) res4 = true;
+if (z1.getRe() != z3.getRe() || z1.getIm() != z3.getIm()) res4 = true;
 ASSERT_EQ(res1, res2);
 ASSERT_EQ(res3, res4);
 }
