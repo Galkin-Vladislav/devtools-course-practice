@@ -16,3 +16,5 @@ class Pseudographics {
     ~Pseudographics();
     std::vector<char> get_graph();
 };
+
+#endif  // MODULES_PSEUDOGRAPHICS_INCLUDE_PSEUDOGRAPHICS_H_
