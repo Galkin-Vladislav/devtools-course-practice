@@ -42,7 +42,7 @@ TEST(Galkin_Vladislav_PseudographicsTest, Check_all_numbers) {
     for (int i = 0; i < str.length(); i++) vec_str.push_back(str[i]);
     for (int i = 0; i < str1.length(); i++) vec_str.push_back(str1[i]);
     for (int i = 0; i < str2.length(); i++) vec_str.push_back(str2[i]);
-    // line constraint <=80
+    // line constraint 80 sumbols
 
     ASSERT_EQ(vec_str, graph.get_graph());
 }
