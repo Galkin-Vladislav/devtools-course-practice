@@ -30,7 +30,7 @@ Pseudographics::Pseudographics(int num) {
                 vecUp.push_back('.');
                 vecMid.push_back('.'); vecMid.push_back('.');
                 vecMid.push_back('|');
-                vecDown.push_back('.'), vecDown.push_back('.');
+                vecDown.push_back('.'); vecDown.push_back('.');
                 vecDown.push_back('|');
                 break;
             }
@@ -39,7 +39,7 @@ Pseudographics::Pseudographics(int num) {
                 vecUp.push_back('.');
                 vecMid.push_back('.'); vecMid.push_back('_');
                 vecMid.push_back('|');
-                vecDown.push_back('|'), vecDown.push_back('_');
+                vecDown.push_back('|'); vecDown.push_back('_');
                 vecDown.push_back('.');
                 break;
             }
@@ -48,7 +48,7 @@ Pseudographics::Pseudographics(int num) {
                 vecUp.push_back('.');
                 vecMid.push_back('.'); vecMid.push_back('_');
                 vecMid.push_back('|');
-                vecDown.push_back('.'), vecDown.push_back('_');
+                vecDown.push_back('.'); vecDown.push_back('_');
                 vecDown.push_back('|');
                 break;
             }
@@ -57,7 +57,7 @@ Pseudographics::Pseudographics(int num) {
                 vecUp.push_back('.');
                 vecMid.push_back('|'); vecMid.push_back('_');
                 vecMid.push_back('|');
-                vecDown.push_back('.'), vecDown.push_back('.');
+                vecDown.push_back('.'); vecDown.push_back('.');
                 vecDown.push_back('|');
                 break;
             }
@@ -66,7 +66,7 @@ Pseudographics::Pseudographics(int num) {
                 vecUp.push_back('.');
                 vecMid.push_back('|'); vecMid.push_back('_');
                 vecMid.push_back('.');
-                vecDown.push_back('.'), vecDown.push_back('_');
+                vecDown.push_back('.'); vecDown.push_back('_');
                 vecDown.push_back('|');
                 break;
             }
@@ -75,7 +75,7 @@ Pseudographics::Pseudographics(int num) {
                 vecUp.push_back('.');
                 vecMid.push_back('|'); vecMid.push_back('_');
                 vecMid.push_back('.');
-                vecDown.push_back('|'), vecDown.push_back('_');
+                vecDown.push_back('|'); vecDown.push_back('_');
                 vecDown.push_back('|');
                 break;
             }
@@ -84,7 +84,7 @@ Pseudographics::Pseudographics(int num) {
                 vecUp.push_back('.');
                 vecMid.push_back('.'); vecMid.push_back('.');
                 vecMid.push_back('|');
-                vecDown.push_back('.'), vecDown.push_back('.');
+                vecDown.push_back('.'); vecDown.push_back('.');
                 vecDown.push_back('|');
                 break;
             }
@@ -93,7 +93,7 @@ Pseudographics::Pseudographics(int num) {
                 vecUp.push_back('.');
                 vecMid.push_back('|'); vecMid.push_back('_');
                 vecMid.push_back('|');
-                vecDown.push_back('|'), vecDown.push_back('_');
+                vecDown.push_back('|'); vecDown.push_back('_');
                 vecDown.push_back('|');
                 break;
             }
@@ -102,7 +102,7 @@ Pseudographics::Pseudographics(int num) {
                 vecUp.push_back('.');
                 vecMid.push_back('|'); vecMid.push_back('_');
                 vecMid.push_back('|');
-                vecDown.push_back('.'), vecDown.push_back('.');
+                vecDown.push_back('.'); vecDown.push_back('.');
                 vecDown.push_back('|');
                 break;
             }
