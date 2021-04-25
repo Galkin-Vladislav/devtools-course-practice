@@ -13,7 +13,7 @@ TEST(Galkin_Vladislav_PseudographicsTest, Check_Zero_and_get_graph) {
 
     std::string str = "._.#|.|#|_|#";
     std::vector<char> vec_str;
-    for (int i = 0; i < str.length(); i++) vec_str.push_back(str[i]);
+    for (int i = 0; i < str.size(); i++) vec_str.push_back(str[i]);
 
     ASSERT_EQ(vec_str, graph.get_graph());
 }
@@ -25,7 +25,7 @@ TEST(Galkin_Vladislav_PseudographicsTest, Invalid_value) {
 
     std::string str = "error#invalid value#error#";
     std::vector<char> vec_str;
-    for (int i = 0; i < str.length(); i++) vec_str.push_back(str[i]);
+    for (int i = 0; i < str.size(); i++) vec_str.push_back(str[i]);
 
     ASSERT_EQ(vec_str, graph.get_graph());
 }
@@ -39,9 +39,9 @@ TEST(Galkin_Vladislav_PseudographicsTest, Check_all_numbers) {
     std::string str2 = "| |_| ..| |_|#";
 
     std::vector<char> vec_str;
-    for (int i = 0; i < str.length(); i++) vec_str.push_back(str[i]);
-    for (int i = 0; i < str1.length(); i++) vec_str.push_back(str1[i]);
-    for (int i = 0; i < str2.length(); i++) vec_str.push_back(str2[i]);
+    for (int i = 0; i < str.size(); i++) vec_str.push_back(str[i]);
+    for (int i = 0; i < str1.size(); i++) vec_str.push_back(str1[i]);
+    for (int i = 0; i < str2.size(); i++) vec_str.push_back(str2[i]);
     // line constraint 80 sumbols
 
     ASSERT_EQ(vec_str, graph.get_graph());
