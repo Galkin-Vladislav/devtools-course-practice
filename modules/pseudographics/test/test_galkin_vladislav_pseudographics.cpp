@@ -51,3 +51,22 @@ TEST(Galkin_Vladislav_PseudographicsTest, Check_all_numbers) {
 
     ASSERT_EQ(vec_str, graph.get_graph());
 }
+
+TEST(Galkin_Vladislav_PseudographicsTest, Check_get_Up_Mid_Down_str) {
+    int num = 94;
+    Pseudographics graph(num);
+
+    std::string strUp = "._. ...";
+    std::string strMid = "|_| |_|";
+    std::string strDown = "..| ..|";
+    std::vector<char> vec_strUp, vec_strMid, vec_strDown;
+    for (int i = 0; i < static_cast<int>(strUp.length()); i++) {
+        vec_strUp.push_back(strUp[i]);
+        vec_strMid.push_back(strMid[i]);
+        vec_strDown.push_back(strDown[i]);
+    }
+
+    ASSERT_EQ(graph.get_Up_graph(), vec_strUp);
+    ASSERT_EQ(graph.get_Mid_graph(), vec_strMid);
+    ASSERT_EQ(graph.get_Down_graph(), vec_strDown);
+}

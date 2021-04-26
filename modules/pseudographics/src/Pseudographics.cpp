@@ -133,3 +133,21 @@ std::vector<char> Pseudographics::get_graph() {
     vecRes.insert(vecRes.end(), vecDown.begin(), vecDown.end());
     return vecRes;
 }
+
+std::vector<char> Pseudographics::get_Up_graph() {
+    std::vector<char> vecRes;
+    vecRes.insert(vecRes.begin(), vecUp.begin(), vecUp.end() - 1);
+    return vecRes;
+}
+
+std::vector<char> Pseudographics::get_Mid_graph() {
+    std::vector<char> vecRes;
+    vecRes.insert(vecRes.begin(), vecMid.begin(), vecMid.end() - 1);
+    return vecRes;
+}
+
+std::vector<char> Pseudographics::get_Down_graph() {
+    std::vector<char> vecRes;
+    vecRes.insert(vecRes.begin(), vecDown.begin(), vecDown.end() - 1);
+    return vecRes;
+}
