@@ -2,119 +2,87 @@
 
 #include "include/Pseudographics.h"
 #include <string>
-#include <vector>
 
 Pseudographics::Pseudographics(int num) {
     std::string s_num = std::to_string(num);
     if (s_num[0] == '-') {
-        vecUp = { 'e', 'r', 'r', 'o', 'r', '#' };
-        vecMid = { 'i', 'n', 'v', 'a', 'l', 'i', 'd',
-' ', 'v', 'a', 'l', 'u', 'e', '#' };
-        vecDown = { 'e', 'r', 'r', 'o', 'r', '#' };
+        vecUp = "error#";
+        vecMid = "invalid value#";
+        vecDown = "error#";
     } else {
         while (s_num.length() != 0) {
             char c = s_num[0];
             s_num.erase(0, 1);
             switch (c) {
             case'0': {
-                vecUp.push_back('.'); vecUp.push_back('_');
-                vecUp.push_back('.');
-                vecMid.push_back('|'); vecMid.push_back('.');
-                vecMid.push_back('|');
-                vecDown.push_back('|'); vecDown.push_back('_');
-                vecDown.push_back('|');
+                vecUp += "._.";
+                vecMid += "|.|";
+                vecDown += "|_|";
                 break;
             }
             case'1': {
-                vecUp.push_back('.'); vecUp.push_back('.');
-                vecUp.push_back('.');
-                vecMid.push_back('.'); vecMid.push_back('.');
-                vecMid.push_back('|');
-                vecDown.push_back('.'); vecDown.push_back('.');
-                vecDown.push_back('|');
+                vecUp += "...";
+                vecMid += "..|";
+                vecDown += "..|";
                 break;
             }
             case'2': {
-                vecUp.push_back('.'); vecUp.push_back('_');
-                vecUp.push_back('.');
-                vecMid.push_back('.'); vecMid.push_back('_');
-                vecMid.push_back('|');
-                vecDown.push_back('|'); vecDown.push_back('_');
-                vecDown.push_back('.');
+                vecUp += "._.";
+                vecMid += "._|";
+                vecDown += "|_.";
                 break;
             }
             case'3': {
-                vecUp.push_back('.'); vecUp.push_back('_');
-                vecUp.push_back('.');
-                vecMid.push_back('.'); vecMid.push_back('_');
-                vecMid.push_back('|');
-                vecDown.push_back('.'); vecDown.push_back('_');
-                vecDown.push_back('|');
+                vecUp += "._.";
+                vecMid += "._|";
+                vecDown += "._|";
                 break;
             }
             case'4': {
-                vecUp.push_back('.'); vecUp.push_back('.');
-                vecUp.push_back('.');
-                vecMid.push_back('|'); vecMid.push_back('_');
-                vecMid.push_back('|');
-                vecDown.push_back('.'); vecDown.push_back('.');
-                vecDown.push_back('|');
+                vecUp += "...";
+                vecMid += "|_|";
+                vecDown += "..|";
                 break;
             }
             case'5': {
-                vecUp.push_back('.'); vecUp.push_back('_');
-                vecUp.push_back('.');
-                vecMid.push_back('|'); vecMid.push_back('_');
-                vecMid.push_back('.');
-                vecDown.push_back('.'); vecDown.push_back('_');
-                vecDown.push_back('|');
+                vecUp += "._.";
+                vecMid += "|_.";
+                vecDown += "._|";
                 break;
             }
             case'6': {
-                vecUp.push_back('.'); vecUp.push_back('_');
-                vecUp.push_back('.');
-                vecMid.push_back('|'); vecMid.push_back('_');
-                vecMid.push_back('.');
-                vecDown.push_back('|'); vecDown.push_back('_');
-                vecDown.push_back('|');
+                vecUp += "._.";
+                vecMid += "|_.";
+                vecDown += "|_|";
                 break;
             }
             case'7': {
-                vecUp.push_back('.'); vecUp.push_back('_');
-                vecUp.push_back('.');
-                vecMid.push_back('.'); vecMid.push_back('.');
-                vecMid.push_back('|');
-                vecDown.push_back('.'); vecDown.push_back('.');
-                vecDown.push_back('|');
+                vecUp += "._.";
+                vecMid += "..|";
+                vecDown += "..|";
                 break;
             }
             case'8': {
-                vecUp.push_back('.'); vecUp.push_back('_');
-                vecUp.push_back('.');
-                vecMid.push_back('|'); vecMid.push_back('_');
-                vecMid.push_back('|');
-                vecDown.push_back('|'); vecDown.push_back('_');
-                vecDown.push_back('|');
+                vecUp += "._.";
+                vecMid += "|_|";
+                vecDown += "|_|";
                 break;
             }
             case'9': {
-                vecUp.push_back('.'); vecUp.push_back('_');
-                vecUp.push_back('.');
-                vecMid.push_back('|'); vecMid.push_back('_');
-                vecMid.push_back('|');
-                vecDown.push_back('.'); vecDown.push_back('.');
-                vecDown.push_back('|');
+                vecUp += "._.";
+                vecMid += "|_|";
+                vecDown += "..|";
                 break;
             }
             }
             if (s_num.length() != 0) {
-                vecUp.push_back(' ');
-                vecMid.push_back(' ');
-                vecDown.push_back(' ');
+                vecUp += ' ';
+                vecMid += ' ';
+                vecDown += ' ';
             } else {
-                vecUp.push_back('#');
-                vecMid.push_back('#');
-                vecDown.push_back('#');
+                vecUp += '#';
+                vecMid += '#';
+                vecDown += '#';
             }
         }
     }
@@ -126,28 +94,22 @@ Pseudographics::~Pseudographics() {
     vecDown.clear();
 }
 
-std::vector<char> Pseudographics::get_graph() {
-    std::vector<char> vecRes;
+std::string Pseudographics::get_graph() const {
+    std::string vecRes;
     vecRes = vecUp;
-    vecRes.insert(vecRes.end(), vecMid.begin(), vecMid.end());
-    vecRes.insert(vecRes.end(), vecDown.begin(), vecDown.end());
+    vecRes += vecMid;
+    vecRes += vecDown;
     return vecRes;
 }
 
-std::vector<char> Pseudographics::get_Up_graph() {
-    std::vector<char> vecRes;
-    vecRes.insert(vecRes.begin(), vecUp.begin(), vecUp.end() - 1);
-    return vecRes;
+std::string Pseudographics::get_Up_graph() const {
+    return vecUp;
 }
 
-std::vector<char> Pseudographics::get_Mid_graph() {
-    std::vector<char> vecRes;
-    vecRes.insert(vecRes.begin(), vecMid.begin(), vecMid.end() - 1);
-    return vecRes;
+std::string Pseudographics::get_Mid_graph() const {
+    return vecMid;
 }
 
-std::vector<char> Pseudographics::get_Down_graph() {
-    std::vector<char> vecRes;
-    vecRes.insert(vecRes.begin(), vecDown.begin(), vecDown.end() - 1);
-    return vecRes;
+std::string Pseudographics::get_Down_graph() const {
+    return vecDown;
 }
