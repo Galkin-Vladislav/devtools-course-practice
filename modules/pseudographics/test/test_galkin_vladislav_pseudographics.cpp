@@ -65,7 +65,7 @@ TEST(Galkin_Vladislav_PseudographicsTest, Check_get_Up_Mid_Down_str) {
         vec_strDown.push_back(strDown[i]);
     }
     // Checking each line separately
-    ASSERT_EQ(graph.get_Up_graph(), vec_strUp);
-    ASSERT_EQ(graph.get_Mid_graph(), vec_strMid);
-    ASSERT_EQ(graph.get_Down_graph(), vec_strDown);
+    ASSERT_EQ(vec_strUp, graph.get_Up_graph());
+    ASSERT_EQ(vec_strMid, graph.get_Mid_graph());
+    ASSERT_EQ(vec_strDown, graph.get_Down_graph());
 }
