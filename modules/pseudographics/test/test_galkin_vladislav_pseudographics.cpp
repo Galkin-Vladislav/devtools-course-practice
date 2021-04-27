@@ -3,6 +3,7 @@
 #include <gtest/gtest.h>
 
 #include <string>
+
 #include <vector>
 
 #include "include/Pseudographics.h"
