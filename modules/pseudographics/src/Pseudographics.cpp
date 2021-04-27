@@ -2,7 +2,6 @@
 
 #include "include/Pseudographics.h"
 #include <string>
-
 #include <vector>
 
 Pseudographics::Pseudographics(int num) {
