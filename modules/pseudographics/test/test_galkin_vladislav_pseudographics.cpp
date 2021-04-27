@@ -4,7 +4,6 @@
 
 #include <string>
 #include <vector>
-
 #include "include/Pseudographics.h"
 
 TEST(Galkin_Vladislav_PseudographicsTest, Check_Zero_and_get_graph) {
